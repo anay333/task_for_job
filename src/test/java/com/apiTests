@@ -28,7 +28,7 @@ public class TestRestClass {
         }
 
    // @Test
- //   @DisplayName("Тестирование запроса POST создание пустой папки с проверкой status code = 201")
+ //   @DisplayName("Тестирование запроса POST создание пустой папки с проверкой status code = 200")
   //  public void postRequestCheckStatusCode() {
    //         RestAssured.given()
     //            .spec(requestSpecification())//---> Указание RequestSpecification для формирования request
