@@ -1,0 +1,68 @@
+package com.apiTests;
+
+import com.model.User;
+import io.restassured.RestAssured;
+import org.apache.hc.core5.http.HttpStatus;
+import org.hamcrest.Matchers;
+import org.junit.Test;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.DisplayName;
+
+import static specification.Specifications.requestSpecification;
+
+public class TestRestClass {
+
+ //   @Before
+ //залогиниться
+    //@After
+    // разлогиниться
+        @Test
+        @DisplayName("Тестирование запроса Get c проверкой status code = 200")
+        public void getRequestCheckStatusCode() {
+            RestAssured.given()
+                    .spec(requestSpecification())//---> Указание RequestSpecification для формирования request
+                    .get("/client/disk?source=main-loginmenu")//---> Endpoint для выполнения запроса GET
+                    .then()
+                    .statusCode(HttpStatus.SC_OK);//---> Проверка статус код
+        }
+
+   // @Test
+ //   @DisplayName("Тестирование запроса POST создание пустой папки с проверкой status code = 201")
+  //  public void postRequestCheckStatusCode() {
+   //         RestAssured.given()
+    //            .spec(requestSpecification())//---> Указание RequestSpecification для формирования request
+     //           .body(user)//---> body для запроса с методом POST
+     //           .post("/models/?_m=do-resource-create-folder")//---> Endpoint для выполнения запроса GET
+     //           .then()
+     //           .statusCode(HttpStatus.SC_CREATED);//---> Проверка статус код
+   // }
+
+
+    // @Test
+    //   @DisplayName("Тестирование запроса GET создана ли папка с проверкой того, что она пустая")
+
+
+
+   // @Test
+  //  @DisplayName("Тестирование запроса Post добавление файла в папку")
+  //  public void postRequestCheckResponseBody() {
+   //     RestAssured.given()
+   //             .spec(requestSpecification())//---> Указание RequestSpecification для формирования request
+   //             .body())//---> body для запроса с методом POST
+   //             .post("")//---> Endpoint для выполнения запроса GET
+    //            .then()
+    //            .statusCode(HttpStatus.SC_OK)//---> Проверка статус код
+     //           .assertThat()
+     //           .body("login", Matchers.is(""));//---> Проверка Body
+     //     }
+
+    // @Test
+    //   @DisplayName("Тестирование запроса GET наличие файла в нашей папке")
+    // @Test
+    //   @DisplayName("Тестирование запроса перенаименование файла в папке")
+    // @Test
+    //   @DisplayName("Тестирование запроса GET наличие перенаименованного файла в папке")
+    }
+
+
