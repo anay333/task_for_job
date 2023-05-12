@@ -1,0 +1,15 @@
+package com.model;
+
+public class User {
+    public String uid;
+    public String login;
+    public String sk;
+//другие параметры body
+
+    public User(String uid, String login,String sk) {
+        this.uid = uid;
+        this.login = login;
+        this.sk=sk;
+        //другие параметры body
+    }
+}
